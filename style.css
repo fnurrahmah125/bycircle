@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-image: url(img/Landing\ Page.png);
+  background-size: cover;
+}
+
+/* ----- NAVIGATION ----- */
+nav {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  height: 30px;
+}
+
+.menu-toggle ion-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-list {
+  height: 0;
+  transform: translateY(-50%) scaleY(0);
+  text-align: right;
+  padding-top: 1rem;
+  margin-left: auto;
+  transition: all 1s;
+}
+
+.show {
+  height: 100%;
+  transform: none;
+  transition: all 1s;
+}
+
+.menu-list ul {
+  margin-bottom: 1.5rem;
+}
+
+.menu-list ul li {
+  margin-bottom: 0.75rem;
+}
+
+.menu-list ul li a {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1d1e3c;
+  transition: color 0.3s;
+}
+
+.menu-list ul li:not(:first-child):hover a {
+  color: #fe998d;
+}
+
+.menu-list ul li a.active {
+  font-weight: 500;
+  position: relative;
+}
+
+.menu-list ul li a.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  background: #fe998d;
+}
+
+.account-btn-sm,
+.account-btn-lg {
+  position: relative;
+}
+
+.account-btn-sm a,
+.account-btn-lg a {
+  position: relative;
+  font-weight: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  background: #1d1e3c;
+  z-index: 2;
+  transition: background 0.5s;
+}
+
+.account-btn-sm .bg-btn,
+.account-btn-lg .bg-btn {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 100%;
+  height: 35px;
+  background-color: #fe998d;
+}
+
+.account-btn-sm:hover a,
+.account-btn-lg:hover a {
+  background: #0f0f1f;
+}
+
+.account-btn-lg {
+  display: none;
+}
+
+/* ----- HEADER ----- */
+header {
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+header .lp-img {
+  width: 100%;
+  max-width: 630px;
+  padding: 5rem 0;
+}
+
+header .scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding-bottom: 2rem;
+}
+
+header .scroll img {
+  width: 24px;
+}
+
+header .scroll p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1e3c;
+}
+
+@media (min-width: 768px) {
+  /* ----- NAVIGATION ----- */
+  nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+
+  .menu-toggle,
+  .account-btn-sm {
+    display: none;
+  }
+
+  .menu-list {
+    display: flex;
+    height: auto;
+    transform: none;
+    text-align: right;
+    padding-top: 0;
+    margin-left: 0;
+    transition: all 1s;
+  }
+
+  .menu-list ul {
+    margin-bottom: 0;
+  }
+
+  .menu-list ul li {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .account-btn-lg {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 992px) {
+  /* ----- NAVIGATION ----- */
+  .menu-list ul li a {
+    font-size: 1.125rem;
+  }
+
+  .account-btn-lg a {
+    font-weight: 1.125rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .account-btn-lg .bg-btn {
+    top: -3px;
+    left: 5px;
+    height: 45px;
+  }
+
+  /* ----- HEADER ----- */
+  header .scroll p {
+    font-size: 1.125rem;
+  }
+}
