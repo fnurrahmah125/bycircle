@@ -38,24 +38,20 @@ nav .logo {
   height: 30px;
 }
 
-.menu-toggle ion-icon {
+.menu-toggle {
   font-size: 2rem;
   cursor: pointer;
 }
 
 .menu-list {
-  height: 0;
-  transform: translateY(-50%) scaleY(0);
+  display: none;
   text-align: right;
   padding-top: 1rem;
   margin-left: auto;
-  transition: all 1s;
 }
 
 .show {
-  height: 100%;
-  transform: none;
-  transition: all 1s;
+  display: block;
 }
 
 .menu-list ul {
