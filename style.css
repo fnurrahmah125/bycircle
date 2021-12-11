@@ -87,13 +87,11 @@ nav .logo {
   background: #fe998d;
 }
 
-.account-btn-sm,
-.account-btn-lg {
+.account-btn {
   position: relative;
 }
 
-.account-btn-sm a,
-.account-btn-lg a {
+.account-btn a {
   position: relative;
   font-weight: 1rem;
   color: #fff;
@@ -103,8 +101,7 @@ nav .logo {
   transition: background 0.5s;
 }
 
-.account-btn-sm .bg-btn,
-.account-btn-lg .bg-btn {
+.account-btn .bg-btn {
   position: absolute;
   top: 3px;
   left: 5px;
@@ -113,13 +110,8 @@ nav .logo {
   background-color: #fe998d;
 }
 
-.account-btn-sm:hover a,
-.account-btn-lg:hover a {
+.account-btn:hover a {
   background: #0f0f1f;
-}
-
-.account-btn-lg {
-  display: none;
 }
 
 /* ----- HEADER ----- */
@@ -161,8 +153,7 @@ header .scroll p {
     padding-top: 1.5rem;
   }
 
-  .menu-toggle,
-  .account-btn-sm {
+  .menu-toggle {
     display: none;
   }
 
@@ -178,16 +169,14 @@ header .scroll p {
 
   .menu-list ul {
     margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .menu-list ul li {
     display: inline-block;
     margin-right: 2rem;
     margin-bottom: 0;
-  }
-
-  .account-btn-lg {
-    display: inline-block;
   }
 }
 
@@ -197,12 +186,12 @@ header .scroll p {
     font-size: 1.125rem;
   }
 
-  .account-btn-lg a {
+  .account-btn a {
     font-weight: 1.125rem;
     padding: 0.75rem 1.5rem;
   }
 
-  .account-btn-lg .bg-btn {
+  .account-btn .bg-btn {
     top: -3px;
     left: 5px;
     height: 45px;
